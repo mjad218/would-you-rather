@@ -6,6 +6,7 @@ import {BrowserRouter as Router, Route, Routes } from "react-router-dom"
 import "./App.css"
 import Add from './pages/Add';
 import Leaderboard from './pages/Leaderboard';
+import LogIn from './pages/LogIn';
 function App() {
   return (
     <Router> 
@@ -16,6 +17,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/add" element={<Add />} />
           <Route path="/leaderboard" element={<Leaderboard />} />
+          <Route path="/login" element={<LogIn />} />
 
         </Routes>
         <Footer />
