@@ -7,7 +7,7 @@ In the "Would You Rather?" Project, you'll build a web app that lets a user play
 In your app, users will be able to answer questions, see which questions they haven’t answered, see how other people have voted, post questions, and see the ranking of users on the leaderboard.
 
 ### Libraries Used 
-1. React 
+1. React for creating the UI
 2. Redux for managing state
 
 
