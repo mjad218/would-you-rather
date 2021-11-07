@@ -1,0 +1,210 @@
+body {
+  margin: 0 ; 
+  padding: 0; 
+  background: #f7f7f7;
+  font-family: 'Source Code Pro', monospace;
+}
+* {
+  box-sizing: border-box;
+}
+header .container {
+  height: 70px;
+  background: #fff;
+  box-shadow: rgb(149 157 165 / 20%) 0px 8px 24px;
+}
+header .row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header .logo, header .user {
+  height : 70px;
+  display: flex;
+  align-items: center;
+}
+.row {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+header .container .wrapper {
+  display: flex;
+  align-items: center;
+  height: 70px;
+}
+
+.container {
+  padding: 0 25px;
+}
+
+footer .container {
+  background: #f9f9f9;
+  padding: 20px;
+  border-top: 1px solid #eee;
+}
+
+main .container .wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+
+}
+@media only screen and (max-width: 900px) {
+  main .container .wrapper {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      height: calc(100vh - 70px - 70px);
+      align-items: center;
+      text-align: center;
+  }
+  
+}
+
+
+.app {
+  box-shadow: rgb(100 100 111 / 20%) 0px 7px 29px 0px;
+  height: 360px;
+  width: 550px;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  border-radius: 15px;
+  align-items: center;
+  justify-content: center;
+}
+
+input#username {
+  border: 1px solid #eee;
+  height: 50px;
+  display: flex;
+  padding-inline-start: 15px;
+  border-radius: 10px;
+  width: 100%;
+  margin: 20px 0;
+}
+
+input[type="submit"] {
+  border: 1px solid #eee;
+  height: 50px;
+  display: flex;
+  border-radius: 10px;
+  background-color: #2ec866;
+  width: 100%;
+  color: #fff;
+  margin: 20px 0;
+  font-weight: bold;
+  justify-content: center;
+}
+
+nav .row ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  height: 70px;
+  align-items: center;
+}
+nav .row ul > li > a {
+  color: #333;
+  display: flex;
+  margin-inline-end: 30px;
+  height: 70px;
+  align-items: center;
+  text-decoration: none;
+}
+
+
+main .row > div {
+  width: calc(100% - 170px - 30px);
+  
+}
+main .row aside {
+  width: 170px;
+  display: flex;
+  flex-direction: column;
+}
+main .row {
+  display: flex;
+  justify-content: space-between;
+}
+
+main .row aside span {
+  display: flex;
+  height: 50px;
+  align-items: center;
+  background: #eee;
+  margin: 10px 0;
+  padding: 0 10px;
+  border-radius: 5px;
+  justify-content: center;
+}
+main .row aside h4 {
+  margin: 0;
+}
+.question {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+} 
+.question > div {
+  width: calc(100% - 50px - 40px );
+  padding: 10px 10px 10px 25px;
+  border-radius: 10px;
+  margin-top: -10px;
+  background: #fff;
+  box-shadow: rgb(0 0 0 / 5%) 0px 6px 24px 0px, rgb(0 0 0 / 8%) 0px 0px 0px 1px;
+}
+.question .image {
+  width: 50px;
+  height: auto;
+  border-radius: 50%;
+}
+.question h3 {
+  margin: 0;
+}
+.question h3 span{
+font-size: small;
+font-weight: 500;
+}
+
+.question h4{
+  margin-top: 15px;
+  font-weight: 500;
+}
+
+.user .image {
+  width: 50px;
+  height: auto;
+  border-radius: 50%;
+}
+.user h4{
+  margin: 0;
+  margin-bottom: 10px;
+}
+
+.user {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.user > div {
+  width: calc(100% - 50px - 40px );
+
+}
+.user > div > div{
+  display: flex;
+}
+.user > div > div span {
+  margin-inline-end: 20px;
+}
+main {
+  margin: 50px 0;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
