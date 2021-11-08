@@ -1,4 +1,4 @@
-import ListQuestion from "../components/ListQuestions";
+import ListQuestions from "../components/ListQuestions";
 
 export default function Home () {
 
@@ -19,7 +19,7 @@ export default function Home () {
 
                     </aside>
                     <div> 
-                        <ListQuestion />
+                        <ListQuestions />
                     </div>   
                 </div>
             </div>

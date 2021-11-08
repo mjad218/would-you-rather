@@ -4,13 +4,14 @@ export default function LogIn () {
         <main>
             <div className="container">
                 <div className="row">
-                    <div className="title">
-                        <h1> 
-                            Please Log In! 
-                        </h1>
-                    </div>
+                    <div> 
 
-                    <div className="wrapper">
+                        <div className="title">
+                            <h1> 
+                                Please Log In! 
+                            </h1>
+                        </div>
+
                         <div className="app">
                             <span >
                                 Would You Rather!  
@@ -24,6 +25,8 @@ export default function LogIn () {
                             </div>
 
                         </div>
+
+
                     </div>
                 </div>
             </div>

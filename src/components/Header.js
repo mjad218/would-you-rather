@@ -1,4 +1,5 @@
 import '../style/header.css';
+import {Link} from "react-router-dom"
 
 export default function Header () {
 
@@ -10,7 +11,7 @@ export default function Header () {
                         <strong >Would You Rather?</strong>
                     </div>
                     <div className="user"> 
-                        <span  >Log In</span>
+                        <Link to="/login" >Log In</Link>
                     </div>
                 </div> 
             </div> 

@@ -1,12 +1,22 @@
+:root {
+
+  --main-color : #2ec866;
+}
 body {
   margin: 0 ; 
   padding: 0; 
   background: #f7f7f7;
-  font-family: 'Source Code Pro', monospace;
+  font-family:  'Raleway', sans-serif;
 }
 * {
   box-sizing: border-box;
 }
+a {
+  text-decoration: none;
+  color: var(--main-color) ;
+  font-weight: 600;
+}
+
 header .container {
   height: 70px;
   background: #fff;
@@ -147,14 +157,17 @@ main .row aside h4 {
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
-} 
-.question > div {
-  width: calc(100% - 50px - 40px );
-  padding: 10px 10px 10px 25px;
+  padding: 20px 10px 20px 25px;
   border-radius: 10px;
   margin-top: -10px;
   background: #fff;
   box-shadow: rgb(0 0 0 / 5%) 0px 6px 24px 0px, rgb(0 0 0 / 8%) 0px 0px 0px 1px;
+  margin-bottom: 35px;
+  
+
+} 
+.question > div {
+  width: calc(100% - 50px - 25px );
 }
 .question .image {
   width: 50px;
@@ -172,8 +185,17 @@ font-weight: 500;
 .question h4{
   margin-top: 15px;
   font-weight: 500;
+  margin-bottom: 15px;
+  
 }
-
+.question p {
+  margin: 0;
+  padding: 0;
+  margin-inline-start: 25px;
+}
+.question p:first-of-type {
+  margin-bottom: 10px;
+}
 .user .image {
   width: 50px;
   height: auto;
