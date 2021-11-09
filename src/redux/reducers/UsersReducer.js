@@ -1,16 +1,12 @@
-import {_getUsers} from "../../data/_DATA"
-let users = []; 
-const getUsers = async () => {
-    users = await _getUsers(); 
-    // users = await users.json();
-    console.log(users);
-}
-
-
-
-const UsersReducer = (state = users , action) => {
-    return state; 
-
+export const UsersReducer = (state, {type, users}) => {
+    switch(type) {
+        case "FETCH_USERS": 
+            return { ...state , ...users };
+        case "UPDATE_USER": 
+            return {};
+        default : 
+            return {...state};
+    }; 
 }
 
 export default UsersReducer; 

@@ -1,18 +1,18 @@
-export default function User() {
-
+export default function User({user}) {
+    console.log(user); 
     return (
        <div className="user"> 
-            <img className="image" src="https://avatars.githubusercontent.com/u/59421219?v=4" /> 
+            <img className="image" src={user.avatarURL} alt={user.name} /> 
            <div> 
                 <h4 > 
-                    Mohamed Gad
+                    {user.name}
                 </h4>
                 <div className="stats">
                     <span > 
-                        Answered Question : 10 
+                        Answered Question : {Object.keys(user.answers).length} 
                     </span>
                     <span > 
-                        Posted Question : 10 
+                        Posted Question :  {Object.keys(user.questions).length}  
                     </span>
 
                 </div>

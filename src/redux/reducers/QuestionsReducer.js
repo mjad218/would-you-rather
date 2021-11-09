@@ -1,4 +1,4 @@
-export const QuestionsReducer = (state = {}, {type, questions}) => {
+export const QuestionsReducer = (state, {type, questions}) => {
     switch(type) {
         case "FETCH_QUESTIONS": 
             return { ...state , ...questions };
@@ -7,7 +7,7 @@ export const QuestionsReducer = (state = {}, {type, questions}) => {
         case "ADD_QUESTION": 
             return {};
         default : 
-            return {};
+            return {...state};
     }; 
 }
 

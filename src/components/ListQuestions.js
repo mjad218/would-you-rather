@@ -7,15 +7,15 @@ export default function ListQuestions () {
     const dispatch = useDispatch(); 
 
     useEffect( () => {
-        dispatch(getQuestions()) 
-    }, []); 
+        dispatch(getQuestions()); 
+    }, [dispatch]); 
     let questions = useSelector( (store) => store.questions); 
-    console.log(questions); 
+    // console.log(questions); 
     return (
         <Fragment>
             {
                 Object.values(questions).map( (q) => {
-                console.log(q); 
+                // console.log(q); 
                 return <Question key={q.id} question={q} /> 
             })
             }
