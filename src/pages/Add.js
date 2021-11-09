@@ -1,5 +1,20 @@
-export default function Add () {
+import { useEffect, useState } from "react";
+import { useDispatch } from "react-redux";
+import {postQuestion} from "../redux/actions/post"
 
+export default function Add () {
+    const [optionOne, setOptionOne] = useState(); 
+    const [optionTwo, setOptionTwo] = useState(); 
+
+    const dispatch = useDispatch(); 
+
+
+    const addQuestion = (e) => {
+        e.preventDefault(); 
+        const q = {optionOne, optionTwo}
+        console.log( q); 
+        dispatch(postQuestion(q)); 
+    }
     return (
         <main>
             <div className="container">
@@ -12,18 +27,14 @@ export default function Add () {
                             <p> 
                                 Try adding a question and let outhers answer it. 
                             </p>
-                            <p> 
-                                You need only to add two things that one of them can be chosen like; Would you rather Pizza or Burgar? 
-                            </p>
-
                         </div>
                         <div className="app">
                             <span >
                                 Would You Rather!  
                             </span>
-                            <form id="form" > 
-                                <input type="text" placeholder="Enter your username" id="username"/> 
-                                <input type="text" placeholder="Enter your username" id="username"/> 
+                            <form id="form"  onSubmit={addQuestion} > 
+                                <input type="text" placeholder="option one..." value={optionOne} onChange={(e) => setOptionOne(e.target.value)}/> 
+                                <input type="text" placeholder="option two..." value={optionTwo} onChange={(e) => setOptionTwo(e.target.value)} /> 
                                 <input type="submit" value="Get ID" /> 
                             </form>
                             <div className="output" id="output" >

@@ -6,6 +6,9 @@ export default function User({user}) {
            <div> 
                 <h4 > 
                     {user.name}
+                    <span> 
+                    {Object.keys(user.answers).length + Object.keys(user.questions).length } Points
+                    </span>
                 </h4>
                 <div className="stats">
                     <span > 

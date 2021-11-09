@@ -85,9 +85,14 @@ main .container .wrapper {
   border-radius: 15px;
   align-items: center;
   justify-content: center;
+  margin-inline-start: 50px;
+  margin-top: 50px;
+  
 }
-
-input#username {
+form#form {
+  width: 85%;
+}
+input {
   border: 1px solid #eee;
   height: 50px;
   display: flex;
@@ -211,7 +216,12 @@ font-weight: 500;
   margin: 0;
   margin-bottom: 10px;
 }
-
+.user h4 span {
+  font-weight: 400;
+  font-size: small;
+  display: block;
+  margin-top: 5px;
+}
 .leaderboard .user {
   display: flex;
   justify-content: space-between;

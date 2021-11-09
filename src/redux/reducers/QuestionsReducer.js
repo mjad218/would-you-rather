@@ -5,7 +5,7 @@ export const QuestionsReducer = (state, {type, questions}) => {
         case "UPDATE_QUESTION": 
             return {};
         case "ADD_QUESTION": 
-            return {};
+            return { ...state , ...questions };
         default : 
             return {...state};
     }; 
