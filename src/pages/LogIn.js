@@ -1,16 +1,19 @@
 import { useDispatch, useSelector } from "react-redux";
 import { useState } from "react";
 import {login} from "../redux/actions/login"
+import { useNavigate } from "react-router";
 
 export default function LogIn () {
     let users = useSelector( (store) => store.users); 
     const [user , setUser] = useState(""); 
     const dispatch = useDispatch(); 
+    const navigate = useNavigate(); 
 
     const handleLogin = (e) => {
         console.log(e.target.value); 
         setUser(e.target.value);
         dispatch(login (e.target.value) );
+        navigate("/"); 
     }
     return (
         <main>

@@ -170,10 +170,11 @@ main .row aside span {
   height: 50px;
   align-items: center;
   background: #eee;
-  margin: 10px 0;
+  margin: 10px 0 0 0;
   padding: 0 10px;
   border-radius: 5px;
   justify-content: center;
+  cursor: pointer;
 }
 main .row aside h4 {
   margin: 0;
@@ -217,13 +218,24 @@ font-weight: 500;
   margin-bottom: 15px;
   
 }
-.question p {
-  margin: 0;
-  padding: 0;
+.question .option span {
+  font-size: small;
+  margin-top: 5px;
+  display: block;
+}
+.question .option {
   margin-inline-start: 25px;
 }
-.question p:first-of-type {
-  margin-bottom: 10px;
+
+.question .option p {
+  font-size: 15px;
+  color: #4a4a4a;
+  letter-spacing: 1px;
+  margin: 0;
+  padding: 0;
+}
+.question .option:first-of-type {
+  margin-bottom: 25px;
 }
 .user .image {
   width: 50px;

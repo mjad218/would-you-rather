@@ -5,7 +5,7 @@ export default function Question ({question}) {
     const users = useSelector((state) => state.users ); 
     let user = Object.values(users).filter( (u) => u.id === question.author );
     user = user["0"];
-    console.log(user);  
+    console.log(question);  
 
     return (
         <div className="question">
@@ -15,13 +15,19 @@ export default function Question ({question}) {
                 <h4> 
                     Would You Rather? 
                 </h4>
-                <p> 
-                    {question.optionOne.text} 
-                </p>
-                <p> 
-                    {question.optionTwo.text} 
- 
-                </p>
+                <div className="option"> 
+                    <p>
+                        {question.optionOne.text} 
+                    </p>
+                    <span > {question.optionOne.votes.length} votes out of {question.optionOne.votes.length + question.optionTwo.votes.length} votes </span>
+                </div>
+                <div className="option"> 
+                    <p> 
+                        {question.optionTwo.text}   
+                    </p>
+                    <span > {question.optionTwo.votes.length} votes out of {question.optionOne.votes.length + question.optionTwo.votes.length} votes </span>
+
+                </div>
             </div>
         </div>
     ) 
