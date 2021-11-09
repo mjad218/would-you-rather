@@ -10,4 +10,8 @@ In your app, users will be able to answer questions, see which questions they ha
 1. React for creating the UI
 2. Redux for managing state
 
+### How to install my app? 
+  1. Clone the repository to your local storage. 
+  2. With your own text editor and your terminal type ```npm install``` to install dependencies. 
+  3. Type ```npm start``` to run the app.
 
