@@ -8,7 +8,7 @@ import Add from './pages/Add';
 import Leaderboard from './pages/Leaderboard';
 import LogIn from './pages/LogIn';
 import {getUsers} from "./redux/actions/users"; 
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import { useEffect } from "react";
 
 
@@ -18,8 +18,8 @@ function App() {
     dispatch(getUsers());
 
   }, [dispatch]); 
-  let users = useSelector( (store) => store.users); 
-  console.log(users); 
+  // let users = useSelector( (store) => store.users); 
+  // console.log(users); 
 
   return (
     <Router> 

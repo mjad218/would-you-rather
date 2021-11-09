@@ -1,8 +1,8 @@
-export const login = () => (dispatch , user) => {
-    dispatch({
+export const login = (user) => {
+    return {
         type : "UPDATE_USER", 
-        user
-    });  
+        payload : user
+    };  
 }
 
 

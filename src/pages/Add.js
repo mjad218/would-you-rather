@@ -1,10 +1,10 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { useDispatch } from "react-redux";
 import {postQuestion} from "../redux/actions/post"
 
 export default function Add () {
-    const [optionOne, setOptionOne] = useState(); 
-    const [optionTwo, setOptionTwo] = useState(); 
+    const [optionOne, setOptionOne] = useState(""); 
+    const [optionTwo, setOptionTwo] = useState(""); 
 
     const dispatch = useDispatch(); 
 

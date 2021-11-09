@@ -34,6 +34,24 @@ header .logo, header .user {
   display: flex;
   align-items: center;
 }
+header .user{
+  flex-grow: 0.1;
+
+}
+header .user img.image {
+  width: 35px;
+  height: 35px;
+  margin-inline-end: 10px;
+}
+header .user span {
+  display: block;
+  font-size: small;
+}
+
+header .user div {
+  width: calc(100% - 70px - 20px) 
+}
+
 .row {
   max-width: 900px;
   margin: 0 auto;
