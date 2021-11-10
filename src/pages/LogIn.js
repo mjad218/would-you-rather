@@ -8,11 +8,12 @@ export default function LogIn () {
     const [user , setUser] = useState(""); 
     const dispatch = useDispatch(); 
     const navigate = useNavigate(); 
-
     const handleLogin = (e) => {
         console.log(e.target.value); 
         setUser(e.target.value);
-        dispatch(login (e.target.value) );
+        const loggedInUSer = Object.values(users).filter((u) => u.id === e.target.value);
+
+        dispatch(login (loggedInUSer["0"]) );
         navigate("/"); 
     }
     return (
@@ -38,6 +39,9 @@ export default function LogIn () {
                                 Or choose a user  
                             </span>
                             <select value={user} onChange={handleLogin}> 
+                                <option> 
+                                    choose a user
+                                </option>
                                 {Object.values(users).map( (u) => <option key={u.id} value={u.id}> {u.name}</option>) }
                             </select>
                         </div>

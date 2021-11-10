@@ -1,19 +1,20 @@
 import { useState } from "react";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import {postQuestion} from "../redux/actions/post"
-
+import { useNavigate } from "react-router";
 export default function Add () {
     const [optionOne, setOptionOne] = useState(""); 
     const [optionTwo, setOptionTwo] = useState(""); 
 
     const dispatch = useDispatch(); 
-
-
+    const navigate = useNavigate(); 
+    const user = useSelector((state) => state.currentUser.id); 
     const addQuestion = (e) => {
         e.preventDefault(); 
-        const q = {optionOne, optionTwo}
-        console.log( q); 
+        const q = {optionOneText : optionOne, optionTwoText : optionTwo, author : user}
+        // console.log( q); 
         dispatch(postQuestion(q)); 
+        navigate("/");
     }
     return (
         <main>

@@ -1,7 +1,18 @@
 import User from "../components/User"
 import { Fragment } from "react";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
+import {getUsers} from "../redux/actions/users"; 
+import { useEffect } from "react";
+
 export default function ListUsers () {
+
+    const dispatch = useDispatch();  
+    useEffect( () => {
+      dispatch(getUsers());
+  
+    }, [dispatch]); 
+
+    
     const users = useSelector((state) => state.users );
     const MAX = Object.keys(users).length;
     let usersArray = Object.values(users); 

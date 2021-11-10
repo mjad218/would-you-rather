@@ -211,6 +211,9 @@ main.leaderboard .row {
 font-size: small;
 font-weight: 500;
 }
+.question .option:hover {
+  background: #e3e3e3;
+}
 
 .question h4{
   margin-top: 15px;
@@ -225,6 +228,10 @@ font-weight: 500;
 }
 .question .option {
   margin-inline-start: 25px;
+  border-radius: 5px;
+  cursor: pointer;
+  padding: 5px 0 5px 10px;
+  background: #f3f3f3;
 }
 
 .question .option p {

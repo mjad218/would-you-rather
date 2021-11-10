@@ -8,7 +8,7 @@ import { useEffect, useState } from "react";
 
 export default function Home () {
     const dispatch = useDispatch(); 
-    const user = useSelector( (state) => state.currentUser.LoggedInReducer ); 
+    const user = useSelector( (state) => state.currentUser.id ); 
 
     useEffect( () => {
         dispatch(getQuestions()); 
@@ -35,6 +35,8 @@ export default function Home () {
             if(q.optionTwo.votes[i] !== user)
                 return true;      
         }
+        if(q.optionOne.votes.length === 0 && q.optionTwo.votes.length === 0) 
+            return true;
     });
 
     const [showAnswered, setShowAnswered] = useState(true);

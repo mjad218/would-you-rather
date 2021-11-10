@@ -1,7 +1,7 @@
 export const LoggedReducer = (state, {type, payload}) => {
     switch(type) {
         case "UPDATE_USER": 
-            return {...state , LoggedInReducer : payload};
+            return {...state , ...payload};
         default : 
             return {...state};
     }; 

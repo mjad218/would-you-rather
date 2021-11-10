@@ -11,7 +11,6 @@ import {getUsers} from "./redux/actions/users";
 import { useDispatch } from "react-redux";
 import { useEffect } from "react";
 
-
 function App() {
   const dispatch = useDispatch(); 
   useEffect( () => {
@@ -22,7 +21,7 @@ function App() {
   // console.log(users); 
 
   return (
-    <Router> 
+    <Router>
       <div className="App">
         <Header />
         <NavBar/> 
@@ -31,7 +30,6 @@ function App() {
           <Route path="/add" element={<Add />} />
           <Route path="/leaderboard" element={<Leaderboard />} />
           <Route path="/login" element={<LogIn />} />
-
         </Routes>
         <Footer />
       </div>
