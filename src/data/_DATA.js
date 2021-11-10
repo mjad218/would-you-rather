@@ -157,7 +157,7 @@ let users = {
           ...questions,
           [formattedQuestion.id]: formattedQuestion
         }
-        
+      
         users = {
           ...users,
           [authedUser]: {
@@ -165,7 +165,6 @@ let users = {
             questions: users[authedUser].questions.concat([formattedQuestion.id])
           }
         }
-  
         res(formattedQuestion)
       }, 1000)
     })

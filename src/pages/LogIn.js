@@ -9,7 +9,7 @@ export default function LogIn () {
     const dispatch = useDispatch(); 
     const navigate = useNavigate(); 
     const handleLogin = (e) => {
-        console.log(e.target.value); 
+        // console.log(e.target.value); 
         setUser(e.target.value);
         const loggedInUSer = Object.values(users).filter((u) => u.id === e.target.value);
 

@@ -34,9 +34,9 @@ export default function Add () {
                                 Would You Rather!  
                             </span>
                             <form id="form"  onSubmit={addQuestion} > 
-                                <input type="text" placeholder="option one..." value={optionOne} onChange={(e) => setOptionOne(e.target.value)}/> 
-                                <input type="text" placeholder="option two..." value={optionTwo} onChange={(e) => setOptionTwo(e.target.value)} /> 
-                                <input type="submit" value="Get ID" /> 
+                                <input type="text" placeholder="Option one..." value={optionOne} onChange={(e) => setOptionOne(e.target.value)}/> 
+                                <input type="text" placeholder="Option two..." value={optionTwo} onChange={(e) => setOptionTwo(e.target.value)} /> 
+                                <input type="submit" value="Post" /> 
                             </form>
                             <div className="output" id="output" >
                             </div>

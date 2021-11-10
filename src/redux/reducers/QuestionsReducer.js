@@ -3,7 +3,7 @@ export const QuestionsReducer = (state, {type, questions, question}) => {
         case "FETCH_QUESTIONS": 
             return { ...state , ...questions };
         case "UPDATE_QUESTION": 
-            return {...state};
+            return {...state , [question.id] : question};
         case "ADD_QUESTION": 
             return { ...state, [question.id] : question};
         default : 

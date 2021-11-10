@@ -10,7 +10,7 @@ import LogIn from './pages/LogIn';
 import {getUsers} from "./redux/actions/users"; 
 import { useDispatch } from "react-redux";
 import { useEffect } from "react";
-
+import SingleQuestion from "./pages/SingleQuestion"
 function App() {
   const dispatch = useDispatch(); 
   useEffect( () => {
@@ -30,6 +30,7 @@ function App() {
           <Route path="/add" element={<Add />} />
           <Route path="/leaderboard" element={<Leaderboard />} />
           <Route path="/login" element={<LogIn />} />
+          <Route path="/questions/:id" element={<SingleQuestion />} />
         </Routes>
         <Footer />
       </div>

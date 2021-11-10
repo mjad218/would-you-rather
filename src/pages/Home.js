@@ -3,11 +3,9 @@ import {getQuestions} from "../redux/actions/questions"
 import { useDispatch, useSelector } from "react-redux";
 import { useEffect, useState } from "react";
 
-
-
-
 export default function Home () {
     const dispatch = useDispatch(); 
+
     const user = useSelector( (state) => state.currentUser.id ); 
 
     useEffect( () => {
@@ -17,26 +15,30 @@ export default function Home () {
     let questions = useSelector( (store) => store.questions); 
 
     let answeredQuestions = Object.values(questions).filter( (q) => {
-        for (var i = 0; i < q.optionOne.votes.length ; i++ ) {
+        for (let i = 0; i < q.optionOne.votes.length ; i++ ) {
             if(q.optionOne.votes[i] === user)
                 return true;      
         }
-        for (var i = 0; i < q.optionTwo.votes.length ; i++ ) {
+        for (let i = 0; i < q.optionTwo.votes.length ; i++ ) {
             if(q.optionTwo.votes[i] === user)
                 return true;      
         }
+        return false; 
     });
     let unAnsweredQuestions = Object.values(questions).filter( (q) => {
-        for (var i = 0; i < q.optionOne.votes.length ; i++ ) {
+        for (let i = 0; i < q.optionOne.votes.length ; i++ ) {
             if(q.optionOne.votes[i] !== user)
                 return true;      
         }
-        for (var i = 0; i < q.optionTwo.votes.length ; i++ ) {
+        for (let i = 0; i < q.optionTwo.votes.length ; i++ ) {
             if(q.optionTwo.votes[i] !== user)
                 return true;      
         }
         if(q.optionOne.votes.length === 0 && q.optionTwo.votes.length === 0) 
             return true;
+
+        return false; 
+
     });
 
     const [showAnswered, setShowAnswered] = useState(true);
