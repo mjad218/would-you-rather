@@ -4,7 +4,6 @@ import {login} from "../redux/actions/login"
 import { useNavigate } from "react-router";
 import { useDispatch, useSelector } from "react-redux";
 
-
 export default function Header () {
     const navigate = useNavigate(); 
     const dispatch = useDispatch();
@@ -12,7 +11,7 @@ export default function Header () {
     const loggedinUser = useSelector( (state) => state.currentUser );
 
     const handleLogout = () => {
-        dispatch(login (null) );
+        dispatch(login({id : 0, name:"", avatarURL : "" , answers : "" , questions : ""}));
         navigate("/login"); 
     }
     return (
@@ -22,7 +21,7 @@ export default function Header () {
                     <div className="logo"> 
                         <strong >Would You Rather?</strong>
                     </div>
-                    {Object.keys(loggedinUser).length ? 
+                    {loggedinUser.id ? 
                     <div className="user"> 
                     <img alt={loggedinUser.name} className="image" src={loggedinUser.avatarURL}/>
                     <div> 
