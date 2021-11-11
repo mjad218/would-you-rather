@@ -9,7 +9,7 @@ export default function Question ({question}) {
     const dispatch = useDispatch(); 
     const users = useSelector((state) => state.users ); 
     const currentUser= useSelector((state) => state.currentUser.id ); 
-    console.log(question); 
+    // console.log(question); 
     let user = Object.values(users).filter( (u) => u.id === question.author );
     user = user["0"];
     const handleAnswers = (answer) => {
