@@ -27,17 +27,17 @@ export default function Home () {
     });
     let unAnsweredQuestions = Object.values(questions).filter( (q) => {
         for (let i = 0; i < q.optionOne.votes.length ; i++ ) {
-            if(q.optionOne.votes[i] !== user)
-                return true;      
+            if(q.optionOne.votes[i] === user)
+                return false;      
         }
         for (let i = 0; i < q.optionTwo.votes.length ; i++ ) {
-            if(q.optionTwo.votes[i] !== user)
-                return true;      
+            if(q.optionTwo.votes[i] === user)
+                return false;      
         }
         if(q.optionOne.votes.length === 0 && q.optionTwo.votes.length === 0) 
             return true;
 
-        return false; 
+        return true; 
 
     });
 

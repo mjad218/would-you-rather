@@ -33,7 +33,7 @@ export default function LogIn () {
                             <form id="form" > 
                                 <input type="text" placeholder="Username..." /> 
                                 <input type="text" placeholder="Password..." /> 
-                                <input type="submit" value="Get ID" /> 
+                                <input type="submit" value="Log In" /> 
                             </form>
                             <span >
                                 Or choose a user  
